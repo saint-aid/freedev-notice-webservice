@@ -4,6 +4,7 @@ import com.rinomari.dev.springboot.domain.posts.Posts;
 import com.rinomari.dev.springboot.domain.posts.PostsRepository;
 import com.rinomari.dev.springboot.web.dto.PostsSaveRequestDto;
 import org.junit.After;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -35,6 +36,7 @@ public class PostsApiControllerTest {
         postsRepository.deleteAll();
     }
 
+    @Test
     public void Posts_등록된다() throws Exception{
         //given
         String title = "title";
