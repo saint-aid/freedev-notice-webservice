@@ -29,7 +29,7 @@ public class PostsRepositoryTest {
         String content = "테스트 본문";
 
         postsRepository.save(Posts.builder()
-                                    .tilte(title)
+                                    .title(title)
                                     .content(content)
                                     .author("spyoon")
                                     .build()
@@ -39,7 +39,7 @@ public class PostsRepositoryTest {
 
         //then
         Posts posts = postsList.get(0);
-        assertThat(posts.getTilte()).isEqualTo(title);
+        assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
 
     }

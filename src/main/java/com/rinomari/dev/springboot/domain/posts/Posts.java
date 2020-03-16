@@ -16,7 +16,7 @@ public class Posts {
     private Long id;
 
     @Column(length = 500, nullable = false)
-    private String tilte;
+    private String title;
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
@@ -24,14 +24,14 @@ public class Posts {
     private String author;
 
     @Builder
-    public Posts(String tilte, String content, String author) {
-        this.tilte = tilte;
+    public Posts(String title, String content, String author) {
+        this.title = title;
         this.content = content;
         this.author = author;
     }
 
     public void update(String title, String content) {
-        this.tilte = title;
+        this.title = title;
         this.content = content;
     }
 }
